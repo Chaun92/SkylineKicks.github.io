@@ -1,0 +1,166 @@
+/* styles.scss */
+.card .btn {
+    background-color: #FF5733;
+    /* Vibrant orange color */
+    border-color: #FF5733;
+    color: #fff;
+}
+
+.card .btn:hover{
+    background-color: #D14224; /* Slightly darker orange on hover */
+        border-color: #D14224;
+}
+
+.button-primary:hover {
+    background-color: #D14224;
+    /* Slightly darker orange on hover */
+    border-color: #D14224;
+}
+
+/* Custom styles for the product cards */
+body {
+    background: linear-gradient(to bottom, #252525, #151515);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+.card {
+    border: none;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.product-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    /* Maintain a 1:1 aspect ratio (square) */
+    overflow: hidden;
+}
+
+.product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-section {
+        position: relative;
+        height: 100vh;
+        background-image: url('../Images/jakob-owens-qoFQxxuk3QY-unsplash.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fff; /* Text color for hero content */
+        padding: 20px;/* Text color for hero content */
+        overflow: hidden;
+   
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .10); /* Adjust opacity as needed */
+    z-index: -1; /* Place the overlay behind content */
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); /* Adjust opacity as needed */
+    z-index: 1; /* Place the overlay above the background image */
+}
+
+/* Style the hero content */
+.hero-content {
+    position: relative; /* Change to relative positioning */
+    z-index: 1; /* Place content above the overlay */
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #FF5733;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.hero-content .btn {
+    font-size: 1rem;
+    background-color: #FF5733; /* Button background color */
+    border-color: #FF5733; /* Button border color */
+    color: #fff; 
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* Product Titles */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Subtitles or Additional Text */
+p {
+    font-size: 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #FF5733; /* Headline color */
+}
+
+/* ... other styles for larger screens ... */
+
+/* Media query for tablets (e.g., iPad) */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    /* Update other styles for tablets as needed */
+}
+
+/* Media query for phones (e.g., iPhone) */
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Update other styles for phones as needed */
+}
